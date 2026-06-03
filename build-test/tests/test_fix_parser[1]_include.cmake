@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser[1]_tests.cmake")
+  include("/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser[1]_tests.cmake")
+else()
+  add_test(test_fix_parser_NOT_BUILT test_fix_parser_NOT_BUILT)
+endif()

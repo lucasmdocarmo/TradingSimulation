@@ -1,0 +1,92 @@
+{
+  "tests": 16,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "LatencyTrackerTest",
+      "tests": 16,
+      "testsuite": [
+        {
+          "name": "DefaultStateHasNoSamples",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 11
+        },
+        {
+          "name": "SingleSampleUpdatesAllStats",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 23
+        },
+        {
+          "name": "NegativeSamplesAreDropped",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 32
+        },
+        {
+          "name": "ZeroMappedToOne",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 39
+        },
+        {
+          "name": "MinAndMaxTracked",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 49
+        },
+        {
+          "name": "MeanIsCorrect",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 60
+        },
+        {
+          "name": "ResetClearsAllState",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 71
+        },
+        {
+          "name": "RecordAfterResetWorks",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 83
+        },
+        {
+          "name": "PercentileOrderingHolds",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 98
+        },
+        {
+          "name": "P100ApproachesMax",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 117
+        },
+        {
+          "name": "FmtNsUnder1000IsNanoseconds",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 130
+        },
+        {
+          "name": "FmtNsMicroseconds",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 135
+        },
+        {
+          "name": "FmtNsMilliseconds",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 140
+        },
+        {
+          "name": "ConcurrentRecordsCountCorrectly",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 150
+        },
+        {
+          "name": "ConcurrentMaxIsCorrect",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 168
+        },
+        {
+          "name": "ScopedLatencyRecordsOnDestruction",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_latency_tracker.cpp",
+          "line": 188
+        }
+      ]
+    }
+  ]
+}

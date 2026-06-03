@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker[1]_tests.cmake")
+  include("/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker[1]_tests.cmake")
+else()
+  add_test(test_latency_tracker_NOT_BUILT test_latency_tracker_NOT_BUILT)
+endif()

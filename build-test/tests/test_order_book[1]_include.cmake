@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book[1]_tests.cmake")
+  include("/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book[1]_tests.cmake")
+else()
+  add_test(test_order_book_NOT_BUILT test_order_book_NOT_BUILT)
+endif()

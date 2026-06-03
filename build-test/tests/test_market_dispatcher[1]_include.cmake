@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher[1]_tests.cmake")
+  include("/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher[1]_tests.cmake")
+else()
+  add_test(test_market_dispatcher_NOT_BUILT test_market_dispatcher_NOT_BUILT)
+endif()

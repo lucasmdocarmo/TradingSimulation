@@ -1,0 +1,2136 @@
+Start testing: Jun 03 16:12 -03
+----------------------------------------------------------
+1/79 Testing: OrderBookTest.RestingBidNoMatch
+1/79 Test: OrderBookTest.RestingBidNoMatch
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.RestingBidNoMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.RestingBidNoMatch" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.RestingBidNoMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.RestingBidNoMatch
+[       OK ] OrderBookTest.RestingBidNoMatch (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.RestingBidNoMatch" end time: Jun 03 16:12 -03
+"OrderBookTest.RestingBidNoMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/79 Testing: OrderBookTest.RestingAskNoMatch
+2/79 Test: OrderBookTest.RestingAskNoMatch
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.RestingAskNoMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.RestingAskNoMatch" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.RestingAskNoMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.RestingAskNoMatch
+[       OK ] OrderBookTest.RestingAskNoMatch (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.RestingAskNoMatch" end time: Jun 03 16:12 -03
+"OrderBookTest.RestingAskNoMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/79 Testing: OrderBookTest.SpreadNoMatch
+3/79 Test: OrderBookTest.SpreadNoMatch
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.SpreadNoMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.SpreadNoMatch" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.SpreadNoMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.SpreadNoMatch
+[       OK ] OrderBookTest.SpreadNoMatch (6 ms)
+[----------] 1 test from OrderBookTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.SpreadNoMatch" end time: Jun 03 16:12 -03
+"OrderBookTest.SpreadNoMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/79 Testing: OrderBookTest.ExactMatchClearsBook
+4/79 Test: OrderBookTest.ExactMatchClearsBook
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.ExactMatchClearsBook" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.ExactMatchClearsBook" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.ExactMatchClearsBook
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.ExactMatchClearsBook
+[       OK ] OrderBookTest.ExactMatchClearsBook (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.ExactMatchClearsBook" end time: Jun 03 16:12 -03
+"OrderBookTest.ExactMatchClearsBook" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/79 Testing: OrderBookTest.TradeAtPassivePriceWhenBuyAggresses
+5/79 Test: OrderBookTest.TradeAtPassivePriceWhenBuyAggresses
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.TradeAtPassivePriceWhenBuyAggresses" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.TradeAtPassivePriceWhenBuyAggresses" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.TradeAtPassivePriceWhenBuyAggresses
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.TradeAtPassivePriceWhenBuyAggresses
+[       OK ] OrderBookTest.TradeAtPassivePriceWhenBuyAggresses (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.TradeAtPassivePriceWhenBuyAggresses" end time: Jun 03 16:12 -03
+"OrderBookTest.TradeAtPassivePriceWhenBuyAggresses" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/79 Testing: OrderBookTest.PartialFillBidLarger
+6/79 Test: OrderBookTest.PartialFillBidLarger
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.PartialFillBidLarger" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.PartialFillBidLarger" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.PartialFillBidLarger
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.PartialFillBidLarger
+[       OK ] OrderBookTest.PartialFillBidLarger (6 ms)
+[----------] 1 test from OrderBookTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.PartialFillBidLarger" end time: Jun 03 16:12 -03
+"OrderBookTest.PartialFillBidLarger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/79 Testing: OrderBookTest.PartialFillAskLarger
+7/79 Test: OrderBookTest.PartialFillAskLarger
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.PartialFillAskLarger" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.PartialFillAskLarger" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.PartialFillAskLarger
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.PartialFillAskLarger
+[       OK ] OrderBookTest.PartialFillAskLarger (6 ms)
+[----------] 1 test from OrderBookTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.PartialFillAskLarger" end time: Jun 03 16:12 -03
+"OrderBookTest.PartialFillAskLarger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/79 Testing: OrderBookTest.PriceTimePriorityFIFO
+8/79 Test: OrderBookTest.PriceTimePriorityFIFO
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.PriceTimePriorityFIFO" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.PriceTimePriorityFIFO" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.PriceTimePriorityFIFO
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.PriceTimePriorityFIFO
+[       OK ] OrderBookTest.PriceTimePriorityFIFO (6 ms)
+[----------] 1 test from OrderBookTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.PriceTimePriorityFIFO" end time: Jun 03 16:12 -03
+"OrderBookTest.PriceTimePriorityFIFO" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/79 Testing: OrderBookTest.BestPriceMatchedFirst
+9/79 Test: OrderBookTest.BestPriceMatchedFirst
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.BestPriceMatchedFirst" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.BestPriceMatchedFirst" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.BestPriceMatchedFirst
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.BestPriceMatchedFirst
+[       OK ] OrderBookTest.BestPriceMatchedFirst (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.BestPriceMatchedFirst" end time: Jun 03 16:12 -03
+"OrderBookTest.BestPriceMatchedFirst" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/79 Testing: OrderBookTest.AggressiveBidSweepsMultipleLevels
+10/79 Test: OrderBookTest.AggressiveBidSweepsMultipleLevels
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.AggressiveBidSweepsMultipleLevels" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.AggressiveBidSweepsMultipleLevels" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.AggressiveBidSweepsMultipleLevels
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.AggressiveBidSweepsMultipleLevels
+[       OK ] OrderBookTest.AggressiveBidSweepsMultipleLevels (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.AggressiveBidSweepsMultipleLevels" end time: Jun 03 16:12 -03
+"OrderBookTest.AggressiveBidSweepsMultipleLevels" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/79 Testing: OrderBookTest.BestBidFallsBackAfterMatch
+11/79 Test: OrderBookTest.BestBidFallsBackAfterMatch
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.BestBidFallsBackAfterMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.BestBidFallsBackAfterMatch" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.BestBidFallsBackAfterMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.BestBidFallsBackAfterMatch
+[       OK ] OrderBookTest.BestBidFallsBackAfterMatch (6 ms)
+[----------] 1 test from OrderBookTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.BestBidFallsBackAfterMatch" end time: Jun 03 16:12 -03
+"OrderBookTest.BestBidFallsBackAfterMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/79 Testing: OrderBookTest.BestAskRisesAfterMatch
+12/79 Test: OrderBookTest.BestAskRisesAfterMatch
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.BestAskRisesAfterMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.BestAskRisesAfterMatch" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.BestAskRisesAfterMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.BestAskRisesAfterMatch
+[       OK ] OrderBookTest.BestAskRisesAfterMatch (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.BestAskRisesAfterMatch" end time: Jun 03 16:12 -03
+"OrderBookTest.BestAskRisesAfterMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/79 Testing: OrderBookTest.DifferentSymbolsDontMatch
+13/79 Test: OrderBookTest.DifferentSymbolsDontMatch
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.DifferentSymbolsDontMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.DifferentSymbolsDontMatch" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.DifferentSymbolsDontMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.DifferentSymbolsDontMatch
+[       OK ] OrderBookTest.DifferentSymbolsDontMatch (14 ms)
+[----------] 1 test from OrderBookTest (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (14 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.DifferentSymbolsDontMatch" end time: Jun 03 16:12 -03
+"OrderBookTest.DifferentSymbolsDontMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/79 Testing: OrderBookTest.ExecutionAggressorSideBuy
+14/79 Test: OrderBookTest.ExecutionAggressorSideBuy
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.ExecutionAggressorSideBuy" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.ExecutionAggressorSideBuy" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.ExecutionAggressorSideBuy
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.ExecutionAggressorSideBuy
+[       OK ] OrderBookTest.ExecutionAggressorSideBuy (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.ExecutionAggressorSideBuy" end time: Jun 03 16:12 -03
+"OrderBookTest.ExecutionAggressorSideBuy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/79 Testing: OrderBookTest.ExecutionAggressorSideSell
+15/79 Test: OrderBookTest.ExecutionAggressorSideSell
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.ExecutionAggressorSideSell" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.ExecutionAggressorSideSell" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.ExecutionAggressorSideSell
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.ExecutionAggressorSideSell
+[       OK ] OrderBookTest.ExecutionAggressorSideSell (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.ExecutionAggressorSideSell" end time: Jun 03 16:12 -03
+"OrderBookTest.ExecutionAggressorSideSell" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/79 Testing: OrderBookTest.ExecutionSymbolCopied
+16/79 Test: OrderBookTest.ExecutionSymbolCopied
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.ExecutionSymbolCopied" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.ExecutionSymbolCopied" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.ExecutionSymbolCopied
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.ExecutionSymbolCopied
+[       OK ] OrderBookTest.ExecutionSymbolCopied (7 ms)
+[----------] 1 test from OrderBookTest (7 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (7 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.ExecutionSymbolCopied" end time: Jun 03 16:12 -03
+"OrderBookTest.ExecutionSymbolCopied" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/79 Testing: OrderBookTest.PoolReleasedAfterFullMatch
+17/79 Test: OrderBookTest.PoolReleasedAfterFullMatch
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_order_book" "--gtest_filter=OrderBookTest.PoolReleasedAfterFullMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"OrderBookTest.PoolReleasedAfterFullMatch" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.PoolReleasedAfterFullMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.PoolReleasedAfterFullMatch
+[       OK ] OrderBookTest.PoolReleasedAfterFullMatch (10 ms)
+[----------] 1 test from OrderBookTest (10 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (10 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.PoolReleasedAfterFullMatch" end time: Jun 03 16:12 -03
+"OrderBookTest.PoolReleasedAfterFullMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/79 Testing: FixParserTest.ParsesFullNOS
+18/79 Test: FixParserTest.ParsesFullNOS
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.ParsesFullNOS" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.ParsesFullNOS" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.ParsesFullNOS
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.ParsesFullNOS
+[       OK ] FixParserTest.ParsesFullNOS (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.ParsesFullNOS" end time: Jun 03 16:12 -03
+"FixParserTest.ParsesFullNOS" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/79 Testing: FixParserTest.ParsesSellOrder
+19/79 Test: FixParserTest.ParsesSellOrder
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.ParsesSellOrder" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.ParsesSellOrder" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.ParsesSellOrder
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.ParsesSellOrder
+[       OK ] FixParserTest.ParsesSellOrder (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.ParsesSellOrder" end time: Jun 03 16:12 -03
+"FixParserTest.ParsesSellOrder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/79 Testing: FixParserTest.OrderIdCopied
+20/79 Test: FixParserTest.OrderIdCopied
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.OrderIdCopied" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.OrderIdCopied" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.OrderIdCopied
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.OrderIdCopied
+[       OK ] FixParserTest.OrderIdCopied (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.OrderIdCopied" end time: Jun 03 16:12 -03
+"FixParserTest.OrderIdCopied" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/79 Testing: FixParserTest.SymbolCopied
+21/79 Test: FixParserTest.SymbolCopied
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.SymbolCopied" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.SymbolCopied" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.SymbolCopied
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.SymbolCopied
+[       OK ] FixParserTest.SymbolCopied (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.SymbolCopied" end time: Jun 03 16:12 -03
+"FixParserTest.SymbolCopied" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/79 Testing: FixParserTest.PriceParsedCorrectly
+22/79 Test: FixParserTest.PriceParsedCorrectly
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.PriceParsedCorrectly" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.PriceParsedCorrectly" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.PriceParsedCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.PriceParsedCorrectly
+[       OK ] FixParserTest.PriceParsedCorrectly (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.PriceParsedCorrectly" end time: Jun 03 16:12 -03
+"FixParserTest.PriceParsedCorrectly" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/79 Testing: FixParserTest.QuantityParsedCorrectly
+23/79 Test: FixParserTest.QuantityParsedCorrectly
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.QuantityParsedCorrectly" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.QuantityParsedCorrectly" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.QuantityParsedCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.QuantityParsedCorrectly
+[       OK ] FixParserTest.QuantityParsedCorrectly (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.QuantityParsedCorrectly" end time: Jun 03 16:12 -03
+"FixParserTest.QuantityParsedCorrectly" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/79 Testing: FixParserTest.LargeQuantity
+24/79 Test: FixParserTest.LargeQuantity
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.LargeQuantity" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.LargeQuantity" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.LargeQuantity
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.LargeQuantity
+[       OK ] FixParserTest.LargeQuantity (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.LargeQuantity" end time: Jun 03 16:12 -03
+"FixParserTest.LargeQuantity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/79 Testing: FixParserTest.Side1IsBuy
+25/79 Test: FixParserTest.Side1IsBuy
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.Side1IsBuy" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.Side1IsBuy" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.Side1IsBuy
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.Side1IsBuy
+[       OK ] FixParserTest.Side1IsBuy (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.Side1IsBuy" end time: Jun 03 16:12 -03
+"FixParserTest.Side1IsBuy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/79 Testing: FixParserTest.Side2IsSell
+26/79 Test: FixParserTest.Side2IsSell
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.Side2IsSell" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.Side2IsSell" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.Side2IsSell
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.Side2IsSell
+[       OK ] FixParserTest.Side2IsSell (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.Side2IsSell" end time: Jun 03 16:12 -03
+"FixParserTest.Side2IsSell" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/79 Testing: FixParserTest.TagsInAnyOrder
+27/79 Test: FixParserTest.TagsInAnyOrder
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.TagsInAnyOrder" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.TagsInAnyOrder" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.TagsInAnyOrder
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.TagsInAnyOrder
+[       OK ] FixParserTest.TagsInAnyOrder (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.TagsInAnyOrder" end time: Jun 03 16:12 -03
+"FixParserTest.TagsInAnyOrder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/79 Testing: FixParserTest.MissingPriceDefaultsToZero
+28/79 Test: FixParserTest.MissingPriceDefaultsToZero
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.MissingPriceDefaultsToZero" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.MissingPriceDefaultsToZero" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.MissingPriceDefaultsToZero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.MissingPriceDefaultsToZero
+[       OK ] FixParserTest.MissingPriceDefaultsToZero (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.MissingPriceDefaultsToZero" end time: Jun 03 16:12 -03
+"FixParserTest.MissingPriceDefaultsToZero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/79 Testing: FixParserTest.MissingQuantityDefaultsToZero
+29/79 Test: FixParserTest.MissingQuantityDefaultsToZero
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.MissingQuantityDefaultsToZero" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.MissingQuantityDefaultsToZero" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.MissingQuantityDefaultsToZero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.MissingQuantityDefaultsToZero
+[       OK ] FixParserTest.MissingQuantityDefaultsToZero (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.MissingQuantityDefaultsToZero" end time: Jun 03 16:12 -03
+"FixParserTest.MissingQuantityDefaultsToZero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/79 Testing: FixParserTest.EmptyLineNocrash
+30/79 Test: FixParserTest.EmptyLineNocrash
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.EmptyLineNocrash" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.EmptyLineNocrash" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.EmptyLineNocrash
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.EmptyLineNocrash
+[       OK ] FixParserTest.EmptyLineNocrash (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.EmptyLineNocrash" end time: Jun 03 16:12 -03
+"FixParserTest.EmptyLineNocrash" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/79 Testing: FixParserTest.SymbolTruncatedToSevenChars
+31/79 Test: FixParserTest.SymbolTruncatedToSevenChars
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.SymbolTruncatedToSevenChars" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.SymbolTruncatedToSevenChars" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.SymbolTruncatedToSevenChars
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.SymbolTruncatedToSevenChars
+[       OK ] FixParserTest.SymbolTruncatedToSevenChars (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.SymbolTruncatedToSevenChars" end time: Jun 03 16:12 -03
+"FixParserTest.SymbolTruncatedToSevenChars" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/79 Testing: FixParserTest.ArrivalNsIsPositive
+32/79 Test: FixParserTest.ArrivalNsIsPositive
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_fix_parser" "--gtest_filter=FixParserTest.ArrivalNsIsPositive" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"FixParserTest.ArrivalNsIsPositive" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FixParserTest.ArrivalNsIsPositive
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FixParserTest
+[ RUN      ] FixParserTest.ArrivalNsIsPositive
+[       OK ] FixParserTest.ArrivalNsIsPositive (0 ms)
+[----------] 1 test from FixParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FixParserTest.ArrivalNsIsPositive" end time: Jun 03 16:12 -03
+"FixParserTest.ArrivalNsIsPositive" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/79 Testing: MarketDispatcherTest.DispatchesToCorrectSymbol
+33/79 Test: MarketDispatcherTest.DispatchesToCorrectSymbol
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.DispatchesToCorrectSymbol" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.DispatchesToCorrectSymbol" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.DispatchesToCorrectSymbol
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.DispatchesToCorrectSymbol
+[       OK ] MarketDispatcherTest.DispatchesToCorrectSymbol (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.DispatchesToCorrectSymbol" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.DispatchesToCorrectSymbol" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/79 Testing: MarketDispatcherTest.UnknownSymbolDoesNotFireCallback
+34/79 Test: MarketDispatcherTest.UnknownSymbolDoesNotFireCallback
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.UnknownSymbolDoesNotFireCallback" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.UnknownSymbolDoesNotFireCallback" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.UnknownSymbolDoesNotFireCallback
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.UnknownSymbolDoesNotFireCallback
+[       OK ] MarketDispatcherTest.UnknownSymbolDoesNotFireCallback (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.UnknownSymbolDoesNotFireCallback" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.UnknownSymbolDoesNotFireCallback" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/79 Testing: MarketDispatcherTest.MultipleSymbolsRoutedIndependently
+35/79 Test: MarketDispatcherTest.MultipleSymbolsRoutedIndependently
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.MultipleSymbolsRoutedIndependently" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.MultipleSymbolsRoutedIndependently" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.MultipleSymbolsRoutedIndependently
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.MultipleSymbolsRoutedIndependently
+[       OK ] MarketDispatcherTest.MultipleSymbolsRoutedIndependently (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.MultipleSymbolsRoutedIndependently" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.MultipleSymbolsRoutedIndependently" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/79 Testing: MarketDispatcherTest.MultipleSubscribersSameSymbol
+36/79 Test: MarketDispatcherTest.MultipleSubscribersSameSymbol
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.MultipleSubscribersSameSymbol" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.MultipleSubscribersSameSymbol" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.MultipleSubscribersSameSymbol
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.MultipleSubscribersSameSymbol
+[       OK ] MarketDispatcherTest.MultipleSubscribersSameSymbol (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.MultipleSubscribersSameSymbol" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.MultipleSubscribersSameSymbol" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/79 Testing: MarketDispatcherTest.TickFieldsPassedThrough
+37/79 Test: MarketDispatcherTest.TickFieldsPassedThrough
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.TickFieldsPassedThrough" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.TickFieldsPassedThrough" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.TickFieldsPassedThrough
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.TickFieldsPassedThrough
+[       OK ] MarketDispatcherTest.TickFieldsPassedThrough (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.TickFieldsPassedThrough" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.TickFieldsPassedThrough" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/79 Testing: MarketDispatcherTest.SubscriberCountZeroByDefault
+38/79 Test: MarketDispatcherTest.SubscriberCountZeroByDefault
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.SubscriberCountZeroByDefault" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.SubscriberCountZeroByDefault" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.SubscriberCountZeroByDefault
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.SubscriberCountZeroByDefault
+[       OK ] MarketDispatcherTest.SubscriberCountZeroByDefault (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.SubscriberCountZeroByDefault" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.SubscriberCountZeroByDefault" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/79 Testing: MarketDispatcherTest.SubscriberCountIncrements
+39/79 Test: MarketDispatcherTest.SubscriberCountIncrements
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.SubscriberCountIncrements" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.SubscriberCountIncrements" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.SubscriberCountIncrements
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.SubscriberCountIncrements
+[       OK ] MarketDispatcherTest.SubscriberCountIncrements (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.SubscriberCountIncrements" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.SubscriberCountIncrements" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/79 Testing: MarketDispatcherTest.EmptySymbolSubscribeIgnored
+40/79 Test: MarketDispatcherTest.EmptySymbolSubscribeIgnored
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_market_dispatcher" "--gtest_filter=MarketDispatcherTest.EmptySymbolSubscribeIgnored" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"MarketDispatcherTest.EmptySymbolSubscribeIgnored" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MarketDispatcherTest.EmptySymbolSubscribeIgnored
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MarketDispatcherTest
+[ RUN      ] MarketDispatcherTest.EmptySymbolSubscribeIgnored
+[       OK ] MarketDispatcherTest.EmptySymbolSubscribeIgnored (0 ms)
+[----------] 1 test from MarketDispatcherTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MarketDispatcherTest.EmptySymbolSubscribeIgnored" end time: Jun 03 16:12 -03
+"MarketDispatcherTest.EmptySymbolSubscribeIgnored" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/79 Testing: LatencyTrackerTest.DefaultStateHasNoSamples
+41/79 Test: LatencyTrackerTest.DefaultStateHasNoSamples
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.DefaultStateHasNoSamples" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.DefaultStateHasNoSamples" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.DefaultStateHasNoSamples
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.DefaultStateHasNoSamples
+[       OK ] LatencyTrackerTest.DefaultStateHasNoSamples (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.DefaultStateHasNoSamples" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.DefaultStateHasNoSamples" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/79 Testing: LatencyTrackerTest.SingleSampleUpdatesAllStats
+42/79 Test: LatencyTrackerTest.SingleSampleUpdatesAllStats
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.SingleSampleUpdatesAllStats" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.SingleSampleUpdatesAllStats" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.SingleSampleUpdatesAllStats
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.SingleSampleUpdatesAllStats
+[       OK ] LatencyTrackerTest.SingleSampleUpdatesAllStats (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.SingleSampleUpdatesAllStats" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.SingleSampleUpdatesAllStats" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/79 Testing: LatencyTrackerTest.NegativeSamplesAreDropped
+43/79 Test: LatencyTrackerTest.NegativeSamplesAreDropped
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.NegativeSamplesAreDropped" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.NegativeSamplesAreDropped" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.NegativeSamplesAreDropped
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.NegativeSamplesAreDropped
+[       OK ] LatencyTrackerTest.NegativeSamplesAreDropped (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.NegativeSamplesAreDropped" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.NegativeSamplesAreDropped" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/79 Testing: LatencyTrackerTest.ZeroMappedToOne
+44/79 Test: LatencyTrackerTest.ZeroMappedToOne
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.ZeroMappedToOne" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.ZeroMappedToOne" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.ZeroMappedToOne
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.ZeroMappedToOne
+[       OK ] LatencyTrackerTest.ZeroMappedToOne (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.ZeroMappedToOne" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.ZeroMappedToOne" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/79 Testing: LatencyTrackerTest.MinAndMaxTracked
+45/79 Test: LatencyTrackerTest.MinAndMaxTracked
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.MinAndMaxTracked" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.MinAndMaxTracked" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.MinAndMaxTracked
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.MinAndMaxTracked
+[       OK ] LatencyTrackerTest.MinAndMaxTracked (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.MinAndMaxTracked" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.MinAndMaxTracked" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/79 Testing: LatencyTrackerTest.MeanIsCorrect
+46/79 Test: LatencyTrackerTest.MeanIsCorrect
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.MeanIsCorrect" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.MeanIsCorrect" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.MeanIsCorrect
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.MeanIsCorrect
+[       OK ] LatencyTrackerTest.MeanIsCorrect (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.MeanIsCorrect" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.MeanIsCorrect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/79 Testing: LatencyTrackerTest.ResetClearsAllState
+47/79 Test: LatencyTrackerTest.ResetClearsAllState
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.ResetClearsAllState" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.ResetClearsAllState" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.ResetClearsAllState
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.ResetClearsAllState
+[       OK ] LatencyTrackerTest.ResetClearsAllState (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.ResetClearsAllState" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.ResetClearsAllState" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/79 Testing: LatencyTrackerTest.RecordAfterResetWorks
+48/79 Test: LatencyTrackerTest.RecordAfterResetWorks
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.RecordAfterResetWorks" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.RecordAfterResetWorks" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.RecordAfterResetWorks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.RecordAfterResetWorks
+[       OK ] LatencyTrackerTest.RecordAfterResetWorks (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.RecordAfterResetWorks" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.RecordAfterResetWorks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/79 Testing: LatencyTrackerTest.PercentileOrderingHolds
+49/79 Test: LatencyTrackerTest.PercentileOrderingHolds
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.PercentileOrderingHolds" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.PercentileOrderingHolds" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.PercentileOrderingHolds
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.PercentileOrderingHolds
+[       OK ] LatencyTrackerTest.PercentileOrderingHolds (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.PercentileOrderingHolds" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.PercentileOrderingHolds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/79 Testing: LatencyTrackerTest.P100ApproachesMax
+50/79 Test: LatencyTrackerTest.P100ApproachesMax
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.P100ApproachesMax" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.P100ApproachesMax" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.P100ApproachesMax
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.P100ApproachesMax
+[       OK ] LatencyTrackerTest.P100ApproachesMax (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.P100ApproachesMax" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.P100ApproachesMax" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/79 Testing: LatencyTrackerTest.FmtNsUnder1000IsNanoseconds
+51/79 Test: LatencyTrackerTest.FmtNsUnder1000IsNanoseconds
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.FmtNsUnder1000IsNanoseconds" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.FmtNsUnder1000IsNanoseconds" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.FmtNsUnder1000IsNanoseconds
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.FmtNsUnder1000IsNanoseconds
+[       OK ] LatencyTrackerTest.FmtNsUnder1000IsNanoseconds (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.FmtNsUnder1000IsNanoseconds" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.FmtNsUnder1000IsNanoseconds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+52/79 Testing: LatencyTrackerTest.FmtNsMicroseconds
+52/79 Test: LatencyTrackerTest.FmtNsMicroseconds
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.FmtNsMicroseconds" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.FmtNsMicroseconds" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.FmtNsMicroseconds
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.FmtNsMicroseconds
+[       OK ] LatencyTrackerTest.FmtNsMicroseconds (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.FmtNsMicroseconds" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.FmtNsMicroseconds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+53/79 Testing: LatencyTrackerTest.FmtNsMilliseconds
+53/79 Test: LatencyTrackerTest.FmtNsMilliseconds
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.FmtNsMilliseconds" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.FmtNsMilliseconds" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.FmtNsMilliseconds
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.FmtNsMilliseconds
+[       OK ] LatencyTrackerTest.FmtNsMilliseconds (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.FmtNsMilliseconds" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.FmtNsMilliseconds" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/79 Testing: LatencyTrackerTest.ConcurrentRecordsCountCorrectly
+54/79 Test: LatencyTrackerTest.ConcurrentRecordsCountCorrectly
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.ConcurrentRecordsCountCorrectly" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.ConcurrentRecordsCountCorrectly" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.ConcurrentRecordsCountCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.ConcurrentRecordsCountCorrectly
+[       OK ] LatencyTrackerTest.ConcurrentRecordsCountCorrectly (9 ms)
+[----------] 1 test from LatencyTrackerTest (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (9 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.ConcurrentRecordsCountCorrectly" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.ConcurrentRecordsCountCorrectly" time elapsed: 00:00:00
+----------------------------------------------------------
+
+55/79 Testing: LatencyTrackerTest.ConcurrentMaxIsCorrect
+55/79 Test: LatencyTrackerTest.ConcurrentMaxIsCorrect
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.ConcurrentMaxIsCorrect" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.ConcurrentMaxIsCorrect" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.ConcurrentMaxIsCorrect
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.ConcurrentMaxIsCorrect
+[       OK ] LatencyTrackerTest.ConcurrentMaxIsCorrect (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.ConcurrentMaxIsCorrect" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.ConcurrentMaxIsCorrect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/79 Testing: LatencyTrackerTest.ScopedLatencyRecordsOnDestruction
+56/79 Test: LatencyTrackerTest.ScopedLatencyRecordsOnDestruction
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_latency_tracker" "--gtest_filter=LatencyTrackerTest.ScopedLatencyRecordsOnDestruction" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"LatencyTrackerTest.ScopedLatencyRecordsOnDestruction" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LatencyTrackerTest.ScopedLatencyRecordsOnDestruction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LatencyTrackerTest
+[ RUN      ] LatencyTrackerTest.ScopedLatencyRecordsOnDestruction
+[       OK ] LatencyTrackerTest.ScopedLatencyRecordsOnDestruction (0 ms)
+[----------] 1 test from LatencyTrackerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LatencyTrackerTest.ScopedLatencyRecordsOnDestruction" end time: Jun 03 16:12 -03
+"LatencyTrackerTest.ScopedLatencyRecordsOnDestruction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/79 Testing: SpscQueueTest.PushAndPopRoundTrip
+57/79 Test: SpscQueueTest.PushAndPopRoundTrip
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.PushAndPopRoundTrip" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.PushAndPopRoundTrip" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.PushAndPopRoundTrip
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.PushAndPopRoundTrip
+[       OK ] SpscQueueTest.PushAndPopRoundTrip (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.PushAndPopRoundTrip" end time: Jun 03 16:12 -03
+"SpscQueueTest.PushAndPopRoundTrip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/79 Testing: SpscQueueTest.PopFromEmptyReturnsFalse
+58/79 Test: SpscQueueTest.PopFromEmptyReturnsFalse
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.PopFromEmptyReturnsFalse" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.PopFromEmptyReturnsFalse" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.PopFromEmptyReturnsFalse
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.PopFromEmptyReturnsFalse
+[       OK ] SpscQueueTest.PopFromEmptyReturnsFalse (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.PopFromEmptyReturnsFalse" end time: Jun 03 16:12 -03
+"SpscQueueTest.PopFromEmptyReturnsFalse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/79 Testing: SpscQueueTest.SizeReflectsContents
+59/79 Test: SpscQueueTest.SizeReflectsContents
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.SizeReflectsContents" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.SizeReflectsContents" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.SizeReflectsContents
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.SizeReflectsContents
+[       OK ] SpscQueueTest.SizeReflectsContents (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.SizeReflectsContents" end time: Jun 03 16:12 -03
+"SpscQueueTest.SizeReflectsContents" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/79 Testing: SpscQueueTest.CapacityMatchesConstructorArg
+60/79 Test: SpscQueueTest.CapacityMatchesConstructorArg
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.CapacityMatchesConstructorArg" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.CapacityMatchesConstructorArg" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.CapacityMatchesConstructorArg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.CapacityMatchesConstructorArg
+[       OK ] SpscQueueTest.CapacityMatchesConstructorArg (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.CapacityMatchesConstructorArg" end time: Jun 03 16:12 -03
+"SpscQueueTest.CapacityMatchesConstructorArg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+61/79 Testing: SpscQueueTest.PushReturnsFalseWhenFull
+61/79 Test: SpscQueueTest.PushReturnsFalseWhenFull
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.PushReturnsFalseWhenFull" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.PushReturnsFalseWhenFull" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.PushReturnsFalseWhenFull
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.PushReturnsFalseWhenFull
+[       OK ] SpscQueueTest.PushReturnsFalseWhenFull (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.PushReturnsFalseWhenFull" end time: Jun 03 16:12 -03
+"SpscQueueTest.PushReturnsFalseWhenFull" time elapsed: 00:00:00
+----------------------------------------------------------
+
+62/79 Testing: SpscQueueTest.PopAfterFullMakesRoomForNextPush
+62/79 Test: SpscQueueTest.PopAfterFullMakesRoomForNextPush
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.PopAfterFullMakesRoomForNextPush" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.PopAfterFullMakesRoomForNextPush" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.PopAfterFullMakesRoomForNextPush
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.PopAfterFullMakesRoomForNextPush
+[       OK ] SpscQueueTest.PopAfterFullMakesRoomForNextPush (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.PopAfterFullMakesRoomForNextPush" end time: Jun 03 16:12 -03
+"SpscQueueTest.PopAfterFullMakesRoomForNextPush" time elapsed: 00:00:00
+----------------------------------------------------------
+
+63/79 Testing: SpscQueueTest.FIFOOrdering
+63/79 Test: SpscQueueTest.FIFOOrdering
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.FIFOOrdering" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.FIFOOrdering" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.FIFOOrdering
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.FIFOOrdering
+[       OK ] SpscQueueTest.FIFOOrdering (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.FIFOOrdering" end time: Jun 03 16:12 -03
+"SpscQueueTest.FIFOOrdering" time elapsed: 00:00:00
+----------------------------------------------------------
+
+64/79 Testing: SpscQueueTest.FIFOPreservedOverWrapAround
+64/79 Test: SpscQueueTest.FIFOPreservedOverWrapAround
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.FIFOPreservedOverWrapAround" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.FIFOPreservedOverWrapAround" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.FIFOPreservedOverWrapAround
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.FIFOPreservedOverWrapAround
+[       OK ] SpscQueueTest.FIFOPreservedOverWrapAround (0 ms)
+[----------] 1 test from SpscQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.FIFOPreservedOverWrapAround" end time: Jun 03 16:12 -03
+"SpscQueueTest.FIFOPreservedOverWrapAround" time elapsed: 00:00:00
+----------------------------------------------------------
+
+65/79 Testing: SpscQueueTest.ProducerConsumerThroughput
+65/79 Test: SpscQueueTest.ProducerConsumerThroughput
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.ProducerConsumerThroughput" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.ProducerConsumerThroughput" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.ProducerConsumerThroughput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.ProducerConsumerThroughput
+[       OK ] SpscQueueTest.ProducerConsumerThroughput (56 ms)
+[----------] 1 test from SpscQueueTest (56 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (56 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.ProducerConsumerThroughput" end time: Jun 03 16:12 -03
+"SpscQueueTest.ProducerConsumerThroughput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+66/79 Testing: SpscQueueTest.ProducerConsumerOrderPreserved
+66/79 Test: SpscQueueTest.ProducerConsumerOrderPreserved
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.ProducerConsumerOrderPreserved" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.ProducerConsumerOrderPreserved" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.ProducerConsumerOrderPreserved
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.ProducerConsumerOrderPreserved
+[       OK ] SpscQueueTest.ProducerConsumerOrderPreserved (4 ms)
+[----------] 1 test from SpscQueueTest (4 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.ProducerConsumerOrderPreserved" end time: Jun 03 16:12 -03
+"SpscQueueTest.ProducerConsumerOrderPreserved" time elapsed: 00:00:00
+----------------------------------------------------------
+
+67/79 Testing: SpscQueueTest.ZeroDroppedUnderLoad
+67/79 Test: SpscQueueTest.ZeroDroppedUnderLoad
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue" "--gtest_filter=SpscQueueTest.ZeroDroppedUnderLoad" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"SpscQueueTest.ZeroDroppedUnderLoad" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SpscQueueTest.ZeroDroppedUnderLoad
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpscQueueTest
+[ RUN      ] SpscQueueTest.ZeroDroppedUnderLoad
+[       OK ] SpscQueueTest.ZeroDroppedUnderLoad (54 ms)
+[----------] 1 test from SpscQueueTest (54 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (54 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"SpscQueueTest.ZeroDroppedUnderLoad" end time: Jun 03 16:12 -03
+"SpscQueueTest.ZeroDroppedUnderLoad" time elapsed: 00:00:00
+----------------------------------------------------------
+
+68/79 Testing: PositionManagerTest.OpenLong
+68/79 Test: PositionManagerTest.OpenLong
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.OpenLong" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.OpenLong" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.OpenLong
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.OpenLong
+[       OK ] PositionManagerTest.OpenLong (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.OpenLong" end time: Jun 03 16:12 -03
+"PositionManagerTest.OpenLong" time elapsed: 00:00:00
+----------------------------------------------------------
+
+69/79 Testing: PositionManagerTest.AddToLongUpdatesVWAP
+69/79 Test: PositionManagerTest.AddToLongUpdatesVWAP
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.AddToLongUpdatesVWAP" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.AddToLongUpdatesVWAP" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.AddToLongUpdatesVWAP
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.AddToLongUpdatesVWAP
+[       OK ] PositionManagerTest.AddToLongUpdatesVWAP (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.AddToLongUpdatesVWAP" end time: Jun 03 16:12 -03
+"PositionManagerTest.AddToLongUpdatesVWAP" time elapsed: 00:00:00
+----------------------------------------------------------
+
+70/79 Testing: PositionManagerTest.OpenShort
+70/79 Test: PositionManagerTest.OpenShort
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.OpenShort" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.OpenShort" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.OpenShort
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.OpenShort
+[       OK ] PositionManagerTest.OpenShort (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.OpenShort" end time: Jun 03 16:12 -03
+"PositionManagerTest.OpenShort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+71/79 Testing: PositionManagerTest.AddToShortUpdatesVWAP
+71/79 Test: PositionManagerTest.AddToShortUpdatesVWAP
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.AddToShortUpdatesVWAP" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.AddToShortUpdatesVWAP" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.AddToShortUpdatesVWAP
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.AddToShortUpdatesVWAP
+[       OK ] PositionManagerTest.AddToShortUpdatesVWAP (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.AddToShortUpdatesVWAP" end time: Jun 03 16:12 -03
+"PositionManagerTest.AddToShortUpdatesVWAP" time elapsed: 00:00:00
+----------------------------------------------------------
+
+72/79 Testing: PositionManagerTest.CloseLongProfitable
+72/79 Test: PositionManagerTest.CloseLongProfitable
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.CloseLongProfitable" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.CloseLongProfitable" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.CloseLongProfitable
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.CloseLongProfitable
+[       OK ] PositionManagerTest.CloseLongProfitable (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.CloseLongProfitable" end time: Jun 03 16:12 -03
+"PositionManagerTest.CloseLongProfitable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+73/79 Testing: PositionManagerTest.CloseLongAtLoss
+73/79 Test: PositionManagerTest.CloseLongAtLoss
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.CloseLongAtLoss" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.CloseLongAtLoss" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.CloseLongAtLoss
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.CloseLongAtLoss
+[       OK ] PositionManagerTest.CloseLongAtLoss (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.CloseLongAtLoss" end time: Jun 03 16:12 -03
+"PositionManagerTest.CloseLongAtLoss" time elapsed: 00:00:00
+----------------------------------------------------------
+
+74/79 Testing: PositionManagerTest.CoverShortProfitable
+74/79 Test: PositionManagerTest.CoverShortProfitable
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.CoverShortProfitable" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.CoverShortProfitable" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.CoverShortProfitable
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.CoverShortProfitable
+[       OK ] PositionManagerTest.CoverShortProfitable (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.CoverShortProfitable" end time: Jun 03 16:12 -03
+"PositionManagerTest.CoverShortProfitable" time elapsed: 00:00:00
+----------------------------------------------------------
+
+75/79 Testing: PositionManagerTest.PartialCloseLocksInPnl
+75/79 Test: PositionManagerTest.PartialCloseLocksInPnl
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.PartialCloseLocksInPnl" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.PartialCloseLocksInPnl" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.PartialCloseLocksInPnl
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.PartialCloseLocksInPnl
+[       OK ] PositionManagerTest.PartialCloseLocksInPnl (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.PartialCloseLocksInPnl" end time: Jun 03 16:12 -03
+"PositionManagerTest.PartialCloseLocksInPnl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+76/79 Testing: PositionManagerTest.LongToShortFlip
+76/79 Test: PositionManagerTest.LongToShortFlip
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.LongToShortFlip" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.LongToShortFlip" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.LongToShortFlip
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.LongToShortFlip
+[       OK ] PositionManagerTest.LongToShortFlip (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.LongToShortFlip" end time: Jun 03 16:12 -03
+"PositionManagerTest.LongToShortFlip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+77/79 Testing: PositionManagerTest.ShortToLongFlip
+77/79 Test: PositionManagerTest.ShortToLongFlip
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.ShortToLongFlip" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.ShortToLongFlip" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.ShortToLongFlip
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.ShortToLongFlip
+[       OK ] PositionManagerTest.ShortToLongFlip (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.ShortToLongFlip" end time: Jun 03 16:12 -03
+"PositionManagerTest.ShortToLongFlip" time elapsed: 00:00:00
+----------------------------------------------------------
+
+78/79 Testing: PositionManagerTest.SymbolsTrackedIndependently
+78/79 Test: PositionManagerTest.SymbolsTrackedIndependently
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.SymbolsTrackedIndependently" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.SymbolsTrackedIndependently" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.SymbolsTrackedIndependently
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.SymbolsTrackedIndependently
+[       OK ] PositionManagerTest.SymbolsTrackedIndependently (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.SymbolsTrackedIndependently" end time: Jun 03 16:12 -03
+"PositionManagerTest.SymbolsTrackedIndependently" time elapsed: 00:00:00
+----------------------------------------------------------
+
+79/79 Testing: PositionManagerTest.AllReturnsAllPositions
+79/79 Test: PositionManagerTest.AllReturnsAllPositions
+Command: "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager" "--gtest_filter=PositionManagerTest.AllReturnsAllPositions" "--gtest_also_run_disabled_tests"
+Directory: /Users/lucasmariano/TradingSimulations/build-test/tests
+"PositionManagerTest.AllReturnsAllPositions" start time: Jun 03 16:12 -03
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250910-5249-qce8ci/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PositionManagerTest.AllReturnsAllPositions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PositionManagerTest
+[ RUN      ] PositionManagerTest.AllReturnsAllPositions
+[       OK ] PositionManagerTest.AllReturnsAllPositions (0 ms)
+[----------] 1 test from PositionManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionManagerTest.AllReturnsAllPositions" end time: Jun 03 16:12 -03
+"PositionManagerTest.AllReturnsAllPositions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 03 16:12 -03

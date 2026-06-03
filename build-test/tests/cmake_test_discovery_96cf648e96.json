@@ -1,0 +1,72 @@
+{
+  "tests": 12,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "PositionManagerTest",
+      "tests": 12,
+      "testsuite": [
+        {
+          "name": "OpenLong",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 22
+        },
+        {
+          "name": "AddToLongUpdatesVWAP",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 32
+        },
+        {
+          "name": "OpenShort",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 46
+        },
+        {
+          "name": "AddToShortUpdatesVWAP",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 56
+        },
+        {
+          "name": "CloseLongProfitable",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 69
+        },
+        {
+          "name": "CloseLongAtLoss",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 80
+        },
+        {
+          "name": "CoverShortProfitable",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 91
+        },
+        {
+          "name": "PartialCloseLocksInPnl",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 102
+        },
+        {
+          "name": "LongToShortFlip",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 119
+        },
+        {
+          "name": "ShortToLongFlip",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 131
+        },
+        {
+          "name": "SymbolsTrackedIndependently",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 146
+        },
+        {
+          "name": "AllReturnsAllPositions",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_position_manager.cpp",
+          "line": 159
+        }
+      ]
+    }
+  ]
+}

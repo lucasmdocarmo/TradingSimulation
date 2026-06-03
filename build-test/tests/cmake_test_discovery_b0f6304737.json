@@ -1,0 +1,67 @@
+{
+  "tests": 11,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "SpscQueueTest",
+      "tests": 11,
+      "testsuite": [
+        {
+          "name": "PushAndPopRoundTrip",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 11
+        },
+        {
+          "name": "PopFromEmptyReturnsFalse",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 19
+        },
+        {
+          "name": "SizeReflectsContents",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 26
+        },
+        {
+          "name": "CapacityMatchesConstructorArg",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 38
+        },
+        {
+          "name": "PushReturnsFalseWhenFull",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 48
+        },
+        {
+          "name": "PopAfterFullMakesRoomForNextPush",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 56
+        },
+        {
+          "name": "FIFOOrdering",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 70
+        },
+        {
+          "name": "FIFOPreservedOverWrapAround",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 81
+        },
+        {
+          "name": "ProducerConsumerThroughput",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 102
+        },
+        {
+          "name": "ProducerConsumerOrderPreserved",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 125
+        },
+        {
+          "name": "ZeroDroppedUnderLoad",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_spsc_queue.cpp",
+          "line": 151
+        }
+      ]
+    }
+  ]
+}

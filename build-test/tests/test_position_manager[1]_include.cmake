@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager[1]_tests.cmake")
+  include("/Users/lucasmariano/TradingSimulations/build-test/tests/test_position_manager[1]_tests.cmake")
+else()
+  add_test(test_position_manager_NOT_BUILT test_position_manager_NOT_BUILT)
+endif()

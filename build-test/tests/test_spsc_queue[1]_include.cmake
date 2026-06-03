@@ -1,0 +1,5 @@
+if(EXISTS "/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue[1]_tests.cmake")
+  include("/Users/lucasmariano/TradingSimulations/build-test/tests/test_spsc_queue[1]_tests.cmake")
+else()
+  add_test(test_spsc_queue_NOT_BUILT test_spsc_queue_NOT_BUILT)
+endif()

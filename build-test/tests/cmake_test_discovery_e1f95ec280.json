@@ -1,0 +1,52 @@
+{
+  "tests": 8,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "MarketDispatcherTest",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "DispatchesToCorrectSymbol",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 21
+        },
+        {
+          "name": "UnknownSymbolDoesNotFireCallback",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 34
+        },
+        {
+          "name": "MultipleSymbolsRoutedIndependently",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 41
+        },
+        {
+          "name": "MultipleSubscribersSameSymbol",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 62
+        },
+        {
+          "name": "TickFieldsPassedThrough",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 80
+        },
+        {
+          "name": "SubscriberCountZeroByDefault",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 99
+        },
+        {
+          "name": "SubscriberCountIncrements",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 104
+        },
+        {
+          "name": "EmptySymbolSubscribeIgnored",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_market_dispatcher.cpp",
+          "line": 116
+        }
+      ]
+    }
+  ]
+}

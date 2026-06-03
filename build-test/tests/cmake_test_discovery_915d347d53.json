@@ -1,0 +1,87 @@
+{
+  "tests": 15,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "FixParserTest",
+      "tests": 15,
+      "testsuite": [
+        {
+          "name": "ParsesFullNOS",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 23
+        },
+        {
+          "name": "ParsesSellOrder",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 35
+        },
+        {
+          "name": "OrderIdCopied",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 43
+        },
+        {
+          "name": "SymbolCopied",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 48
+        },
+        {
+          "name": "PriceParsedCorrectly",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 53
+        },
+        {
+          "name": "QuantityParsedCorrectly",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 58
+        },
+        {
+          "name": "LargeQuantity",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 63
+        },
+        {
+          "name": "Side1IsBuy",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 71
+        },
+        {
+          "name": "Side2IsSell",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 76
+        },
+        {
+          "name": "TagsInAnyOrder",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 85
+        },
+        {
+          "name": "MissingPriceDefaultsToZero",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 98
+        },
+        {
+          "name": "MissingQuantityDefaultsToZero",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 103
+        },
+        {
+          "name": "EmptyLineNocrash",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 108
+        },
+        {
+          "name": "SymbolTruncatedToSevenChars",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 115
+        },
+        {
+          "name": "ArrivalNsIsPositive",
+          "file": "\/Users\/lucasmariano\/TradingSimulations\/tests\/unit\/test_fix_parser.cpp",
+          "line": 126
+        }
+      ]
+    }
+  ]
+}

@@ -91,7 +91,11 @@ Execution OrderBook::buildExecution(int tradeQty, const Order& ask, const Order&
     strncpy(exec.symbol,  symbol,  sizeof(exec.symbol)  - 1);
 
     exec.quantity         = tradeQty;
-    exec.trade_price      = ask.price;
+    // Trade executes at the passive (resting) order's price.
+    // BUY aggressor: the ask was already resting  → ask.price.
+    // SELL aggressor: the bid was already resting → bid.price (price improvement
+    //   for the seller — they asked for X but got the higher resting bid price).
+    exec.trade_price = (aggressor == OrderType::BUY) ? ask.price : bid.price;
     exec.arrival_ns       = chrono::steady_clock::now().time_since_epoch().count();
     // Aggressor's arrival timestamp: BUY aggressor is the bid, SELL is the ask.
     exec.order_arrival_ns = (aggressor == OrderType::BUY) ? bid.arrival_ns

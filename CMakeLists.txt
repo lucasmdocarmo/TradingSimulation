@@ -106,6 +106,20 @@ elseif(PGO_USE)
 endif()
 
 add_subdirectory(libs/reference-data)
+
+# ── Unit Tests (Google Test) ───────────────────────────────────────────────────
+# Enable:  cmake -DBUILD_TESTS=ON -S . -B build-test
+# Run:     ctest --test-dir build-test --output-on-failure
+#          ctest --test-dir build-test -R "OrderBook"   ← filter by name
+#
+# Tests are off by default for the same reason benchmarks are: they pull in
+# GTest via FetchContent (network hit on first run) and link extra binaries
+# that aren't part of the production build.
+option(BUILD_TESTS "Build Google Test unit tests" OFF)
+if(BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
 add_subdirectory(libs/order-book)
 add_subdirectory(libs/position_manager)
 add_subdirectory(libs/fix_session)
