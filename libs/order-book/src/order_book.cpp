@@ -105,9 +105,16 @@ Execution OrderBook::buildExecution(int tradeQty, const Order& ask,
     strncpy(exec.sell_id, bid.id,    sizeof(exec.sell_id) - 1);
     strncpy(exec.symbol,  symbol.c_str(), sizeof(exec.symbol) - 1);
 
-    exec.quantity    = tradeQty;
-    exec.trade_price = ask.price;  // resting order's price (standard price-time priority)
-    exec.arrival_ns  = chrono::steady_clock::now().time_since_epoch().count();
+    exec.quantity         = tradeQty;
+    exec.trade_price      = ask.price;
+    exec.arrival_ns       = chrono::steady_clock::now().time_since_epoch().count();
+    // Propagate the aggressor order's parse timestamp so the cold path can compute
+    // E2E matching latency = exec.arrival_ns - exec.order_arrival_ns.
+    // Aggressor arrival: the order that CAUSED the match.
+    // BUY aggressor → it was inserted as a bid → use bid.arrival_ns.
+    // SELL aggressor → it was inserted as an ask → use ask.arrival_ns.
+    exec.order_arrival_ns = (aggressor_side == OrderType::BUY) ? bid.arrival_ns
+                                                               : ask.arrival_ns;
 
     return exec;
 }

@@ -23,5 +23,7 @@ struct Execution {
     double  trade_price;
     double  quantity;
     Side    side;
-    int64_t arrival_ns;
+    int64_t arrival_ns;       // when the execution was generated (steady_clock)
+    int64_t order_arrival_ns; // when the aggressor order was parsed from FIX
+    // E2E matching latency = arrival_ns - order_arrival_ns
 };

@@ -42,3 +42,33 @@ add_subdirectory(libs/volatility_surface)
 add_subdirectory(libs/risk_engine)
 add_subdirectory(src)
 add_subdirectory(tools)
+
+# ── Google Benchmark (micro-benchmarks) ────────────────────────────────────────
+# Disabled by default — benchmarks are not part of a normal build.
+#
+# Enable:   cmake -DBUILD_BENCHMARKS=ON -DCMAKE_BUILD_TYPE=Release -S . -B build-bench
+# Run:      ./build-bench/bench/bench_order_book
+#           ./build/bench/bench_spsc_queue
+#           ./build/bench/bench_object_pool
+#           ./build/bench/bench_fix_parser
+#
+# FetchContent downloads google/benchmark at configure time (first run only).
+# GIT_SHALLOW=TRUE fetches a single commit instead of the full history.
+# BENCHMARK_ENABLE_TESTING=OFF suppresses the benchmark library's own unit tests.
+option(BUILD_BENCHMARKS "Build Google Benchmark micro-benchmarks" OFF)
+
+if(BUILD_BENCHMARKS)
+    include(FetchContent)
+    FetchContent_Declare(
+        benchmark
+        GIT_REPOSITORY https://github.com/google/benchmark.git
+        GIT_TAG        v1.8.5
+        GIT_SHALLOW    TRUE
+    )
+    set(BENCHMARK_ENABLE_TESTING      OFF CACHE BOOL "" FORCE)
+    set(BENCHMARK_ENABLE_INSTALL      OFF CACHE BOOL "" FORCE)
+    set(BENCHMARK_ENABLE_GTEST_TESTS  OFF CACHE BOOL "" FORCE)
+    FetchContent_MakeAvailable(benchmark)
+
+    add_subdirectory(bench)
+endif()

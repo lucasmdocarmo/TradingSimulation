@@ -90,6 +90,16 @@ public:
         return true;
     }
 
+    // Approximate number of unconsumed items. Not exact under concurrent access
+    // (two separate atomic loads), but accurate enough for monitoring dashboards.
+    size_t size() const noexcept {
+        const size_t tail = tail_.load(std::memory_order_relaxed);
+        const size_t head = head_.load(std::memory_order_relaxed);
+        return (tail >= head) ? (tail - head) : (capacity_ - head + tail);
+    }
+
+    size_t capacity() const noexcept { return capacity_; }
+
 private:
     const size_t      capacity_;
     std::vector<T>    buffer_;   // ring: indices wrap via modulo

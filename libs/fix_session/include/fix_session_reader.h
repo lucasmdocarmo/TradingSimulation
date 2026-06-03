@@ -46,10 +46,11 @@ public:
     // the callback typically just pushes it into the OrderBook immediately.
     void setOrderCallback(const std::function<void(Order)>& callback);
 
-private:
-    // In-place zero-copy parser. Reads directly from the mmap'd buffer.
-    // `line` points into the mapped memory; `len` is the line length in bytes.
+    // In-place zero-copy parser — public so benchmarks can call it directly
+    // without going through the full mmap session lifecycle.
     Order parseFixLine(const char* line, std::size_t len);
+
+private:
 
     std::atomic_bool           running_{false};
     std::function<void(Order)> onOrder_;
