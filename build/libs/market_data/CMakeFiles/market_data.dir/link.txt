@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmarket_data.a CMakeFiles/market_data.dir/src/market_dispatcher.cpp.o CMakeFiles/market_data.dir/src/udp_feed_subscriber.cpp.o
-/usr/bin/ranlib libmarket_data.a

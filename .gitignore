@@ -1,0 +1,35 @@
+# ── AI / Editor ───────────────────────────────────────────────
+CLAUDE.md
+.idea/
+.vscode/
+*.iml
+
+# ── CMake build directories ────────────────────────────────────
+build/
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# ── Compiled output ────────────────────────────────────────────
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# ── clangd index cache ─────────────────────────────────────────
+.cache/
+
+# ── Generated simulation files ─────────────────────────────────
+config/orders.fix
+final_pnl_report.txt
+
+# ── macOS noise ────────────────────────────────────────────────
+.DS_Store
