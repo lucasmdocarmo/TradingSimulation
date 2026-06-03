@@ -1,32 +1,30 @@
 #include "market_dispatcher.h"
 
-#include <string>
-
 void MarketDispatcher::subscribe(const std::string& symbol,
                                  const std::function<void(Tick)>& callback) {
-    if (!symbol.empty())
-        listCallback[symbol].push_back(callback);
+    if (!symbol.empty()) {
+        // Pad to 8 bytes so sym_key() always reads a consistent value.
+        char sym8[8] = {};
+        const std::size_t n = std::min(symbol.size(), sizeof(sym8));
+        std::memcpy(sym8, symbol.c_str(), n);
+        callbacks_[sym_key(sym8)].push_back(callback);
+    }
 }
 
 void MarketDispatcher::dispatch(const Tick& tick) {
-    // std::cout removed from here intentionally.
-    // A std::cout call acquires an internal mutex and may perform a write() syscall,
-    // adding microseconds of jitter to every tick on the hot UDP receive path.
-    // Logging belongs on the cold path; the hot path should only push to queues.
-
-    // tick.symbol is char[8]; std::string(tick.symbol) constructs a temporary key.
-    // This involves a small heap allocation on each tick dispatch — a known cost.
-    // Future improvement: replace std::unordered_map<std::string,...> with a
-    // fixed-symbol lookup table (flat array + memcmp) to eliminate the allocation.
-    const auto it = listCallback.find(std::string(tick.symbol));
-    if (it == listCallback.end()) return;
+    // sym_key() is a single memcpy + implicit load — no heap, no hash over bytes.
+    // tick.symbol is char[8] so memcpy always reads exactly 8 bytes (zero-padded).
+    const auto it = callbacks_.find(sym_key(tick.symbol));
+    if (it == callbacks_.end()) return;
 
     for (const auto& cb : it->second)
         cb(tick);
 }
 
 int MarketDispatcher::subscriberCount(const std::string& symbol) const {
-    const auto it = listCallback.find(symbol);
-    if (it == listCallback.end()) return 0;
-    return static_cast<int>(it->second.size());
+    char sym8[8] = {};
+    const std::size_t n = std::min(symbol.size(), sizeof(sym8));
+    std::memcpy(sym8, symbol.c_str(), n);
+    const auto it = callbacks_.find(sym_key(sym8));
+    return (it == callbacks_.end()) ? 0 : static_cast<int>(it->second.size());
 }

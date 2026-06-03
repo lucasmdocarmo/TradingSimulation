@@ -9,13 +9,110 @@
 #include <string>
 #include <iostream>
 
-// Returns the current monotonic clock in nanoseconds.
-// steady_clock (not high_resolution_clock) is mandatory for latency measurement
-// because it is guaranteed never to go backwards. On some platforms,
-// high_resolution_clock aliases system_clock, which can be adjusted by NTP.
+// ─────────────────────────────────────────────────────────────────────────────
+// Portable monotonic clock — steady_clock fallback, always safe.
+// ─────────────────────────────────────────────────────────────────────────────
 inline int64_t now_ns() noexcept {
     return std::chrono::steady_clock::now().time_since_epoch().count();
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// fast_now_ns() — lowest-overhead nanosecond timestamp per platform.
+//
+// WHY NOT ALWAYS USE steady_clock::now()?
+// steady_clock goes through the OS timer abstraction layer even on paths that
+// are optimised as vDSO (virtual DSO) calls. The overhead per call is:
+//   Linux x86_64:   ~10–20 ns (vDSO CLOCK_MONOTONIC)
+//   macOS ARM64:    ~5 ns     (commpage mach_absolute_time)
+//   macOS x86_64:   ~8 ns     (TSC via vDSO)
+//
+// fast_now_ns() reads the hardware counter directly:
+//   macOS ARM64:  mach_absolute_time() via commpage — ~3 ns, no syscall
+//   x86_64:       RDTSC instruction — ~1–3 ns, 1 CPU instruction
+//   everything else: falls back to now_ns()
+//
+// WHEN TO USE WHICH
+//   now_ns()      — anywhere correctness > performance (reports, init code)
+//   fast_now_ns() — hot path: every order parse, every tick receive
+// ─────────────────────────────────────────────────────────────────────────────
+#if defined(__APPLE__)
+#  include <mach/mach_time.h>
+namespace detail {
+    inline double mach_to_ns() noexcept {
+        mach_timebase_info_data_t tb{};
+        mach_timebase_info(&tb);
+        return static_cast<double>(tb.numer) / static_cast<double>(tb.denom);
+    }
+    // Computed once at startup. mach_timebase_info is constant per machine.
+    // On Apple Silicon (M-series) numer/denom = 1/1, so this is just 1.0.
+    inline const double kMachToNs = mach_to_ns();
+}
+inline int64_t fast_now_ns() noexcept {
+    return static_cast<int64_t>(
+        static_cast<double>(mach_absolute_time()) * detail::kMachToNs);
+}
+
+#elif defined(__x86_64__)
+#  include <time.h>
+namespace detail {
+    // Spin for ~2 ms comparing RDTSC against CLOCK_MONOTONIC_RAW to compute
+    // cycles-per-nanosecond. Called once at program startup.
+    inline double calibrate_tsc() noexcept {
+        struct timespec t1{}, t2{};
+        clock_gettime(CLOCK_MONOTONIC_RAW, &t1);
+        uint32_t lo, hi;
+        __asm__ volatile("rdtsc" : "=a"(lo), "=d"(hi));
+        const uint64_t c1 = (uint64_t)hi << 32 | lo;
+        while (true) {
+            clock_gettime(CLOCK_MONOTONIC_RAW, &t2);
+            const double elapsed_ns = (t2.tv_sec - t1.tv_sec) * 1e9
+                                    + (t2.tv_nsec - t1.tv_nsec);
+            if (elapsed_ns >= 2e6) {
+                __asm__ volatile("rdtsc" : "=a"(lo), "=d"(hi));
+                const uint64_t c2 = (uint64_t)hi << 32 | lo;
+                return static_cast<double>(c2 - c1) / elapsed_ns; // cycles/ns
+            }
+        }
+    }
+    // kTscGhz = cycles per nanosecond (e.g. 3.0 for a 3 GHz CPU).
+    // Initialised once via a 2 ms busy-wait — negligible at startup.
+    inline const double kTscGhz = calibrate_tsc();
+}
+// RDTSC: "Read Time-Stamp Counter" — the CPU cycle counter.
+// One instruction (~1–3 ns). NOT serialising — it can execute out-of-order
+// relative to surrounding instructions. For start/stop pairs requiring strict
+// ordering, use RDTSCP (serialising read) or add LFENCE before RDTSC.
+inline int64_t fast_now_ns() noexcept {
+    uint32_t lo, hi;
+    __asm__ volatile("rdtsc" : "=a"(lo), "=d"(hi));
+    return static_cast<int64_t>(
+        static_cast<double>((uint64_t)hi << 32 | lo) / detail::kTscGhz);
+}
+
+#else
+inline int64_t fast_now_ns() noexcept { return now_ns(); }
+#endif
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CPU_PAUSE — yield the CPU pipeline during a spin-wait loop.
+//
+// Without PAUSE/YIELD, a spin loop hammers the CPU's out-of-order engine and
+// prevents the other hardware thread (on a HT core) from making progress.
+// With PAUSE/YIELD, the CPU inserts a small delay (~14 cycles on x86, ~1 cycle
+// on ARM), reducing power and improving hyper-thread utilisation.
+//
+// This is the building block of adaptive spinning:
+//   for 0..N: CPU_PAUSE()   ← spin briefly, react in nanoseconds
+//   if still empty: sleep   ← fall back to OS scheduling
+// ─────────────────────────────────────────────────────────────────────────────
+#if defined(__x86_64__) || defined(__i386__)
+#  include <immintrin.h>
+#  define CPU_PAUSE() _mm_pause()
+#elif defined(__aarch64__)
+#  define CPU_PAUSE() __asm__ volatile("yield")
+#else
+#  define CPU_PAUSE() ((void)0)
+#endif
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Lock-Free Power-of-2 Latency Histogram
@@ -170,8 +267,8 @@ struct ScopedLatency {
     LatencyTracker& tracker;
     int64_t         start;
     explicit ScopedLatency(LatencyTracker& t) noexcept
-        : tracker(t), start(now_ns()) {}
-    ~ScopedLatency() noexcept { tracker.record(now_ns() - start); }
+        : tracker(t), start(fast_now_ns()) {}
+    ~ScopedLatency() noexcept { tracker.record(fast_now_ns() - start); }
     ScopedLatency(const ScopedLatency&) = delete;
     ScopedLatency& operator=(const ScopedLatency&) = delete;
 };

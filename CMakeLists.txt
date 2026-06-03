@@ -33,6 +33,78 @@ endif()
 # ── Global include for header-only utilities (SpscQueue, ObjectPool, cpu_affinity) ──
 include_directories(${CMAKE_SOURCE_DIR}/libs/utils/include)
 
+# ── Boost ──────────────────────────────────────────────────────────────────────
+# Boost.Lockfree: wait-free SPSC and lock-free MPMC queues (header-only)
+# Boost.Beast:    WebSocket server for the live metrics dashboard (header-only)
+# Boost.Asio:     async I/O layer used by Beast (header-only)
+# Boost.System:   error_code / system_error (compiled, required by Beast)
+#
+# macOS:  brew install boost
+# Linux:  sudo apt-get install libboost-dev libboost-system-dev
+# Since Boost 1.75, Boost.System is header-only — no compiled library.
+# Beast and Asio are also header-only. We only need the header package.
+find_package(Boost 1.80 REQUIRED COMPONENTS headers
+             HINTS /opt/homebrew /usr/local)
+message(STATUS "Boost ${Boost_VERSION} — ${Boost_INCLUDE_DIRS}")
+include_directories(${Boost_INCLUDE_DIRS})
+
+# ── LTO (Link-Time Optimisation) ──────────────────────────────────────────────
+# Merges all translation units at link time → enables cross-module inlining.
+# Example: acceptNewOrder() can be inlined into the FIX reader callback,
+# eliminating the function-call boundary entirely on the hot path.
+# Only active in Release because LTO adds significant compile + link time.
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    include(CheckIPOSupported)
+    check_ipo_supported(RESULT LTO_OK OUTPUT LTO_ERR)
+    if(LTO_OK)
+        message(STATUS "LTO enabled")
+        set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+    else()
+        message(WARNING "LTO unavailable: ${LTO_ERR}")
+    endif()
+endif()
+
+# ── PGO (Profile-Guided Optimisation) ─────────────────────────────────────────
+# Two-pass compilation. Pass 1 instruments the binary to record branch
+# frequencies and call counts at runtime. Pass 2 uses that data to reshape
+# the binary: inline hot call sites, reorder branches, cluster hot code.
+#
+# Step 1 — collect:
+#   cmake -DPGO_GENERATE=ON -DCMAKE_BUILD_TYPE=Release -S . -B build-pgo
+#   cmake --build build-pgo
+#   ./build-pgo/src/trading-system           # run with production-like data
+#   llvm-profdata merge -output=default.profdata *.profraw   # Clang/macOS only
+#
+# Step 2 — apply:
+#   cmake -DPGO_USE=ON -DCMAKE_BUILD_TYPE=Release -S . -B build-release
+#   cmake --build build-release
+option(PGO_GENERATE "Instrument binary for PGO profile collection" OFF)
+option(PGO_USE      "Apply collected PGO profile"                  OFF)
+set(PGO_PROFILE_DIR "${CMAKE_SOURCE_DIR}/build-pgo"
+    CACHE PATH "Directory containing default.profdata (Clang) or *.gcda (GCC)")
+
+if(PGO_GENERATE)
+    if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+        add_compile_options(-fprofile-instr-generate)
+        add_link_options(-fprofile-instr-generate)
+    else()
+        add_compile_options(-fprofile-generate)
+        add_link_options(-fprofile-generate)
+    endif()
+    message(STATUS "PGO: instrumentation enabled — run binary, then rebuild with PGO_USE=ON")
+elseif(PGO_USE)
+    if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+        add_compile_options(
+            -fprofile-instr-use=${PGO_PROFILE_DIR}/default.profdata
+            -Wno-profile-instr-unprofiled)
+        add_link_options(-fprofile-instr-use=${PGO_PROFILE_DIR}/default.profdata)
+    else()
+        add_compile_options(-fprofile-use=${PGO_PROFILE_DIR} -fprofile-correction)
+        add_link_options(-fprofile-use=${PGO_PROFILE_DIR})
+    endif()
+    message(STATUS "PGO: optimised build using ${PGO_PROFILE_DIR}/default.profdata")
+endif()
+
 add_subdirectory(libs/reference-data)
 add_subdirectory(libs/order-book)
 add_subdirectory(libs/position_manager)
@@ -40,6 +112,7 @@ add_subdirectory(libs/fix_session)
 add_subdirectory(libs/market_data)
 add_subdirectory(libs/volatility_surface)
 add_subdirectory(libs/risk_engine)
+add_subdirectory(libs/metrics_server)
 add_subdirectory(src)
 add_subdirectory(tools)
 

@@ -1,6 +1,7 @@
 #include "fix_session_reader.h"
 #include "instrument_store.h"
 #include "market_dispatcher.h"
+#include "metrics_server.h"
 #include "order_book.h"
 #include "position_manager.h"
 #include "risk_engine.h"
@@ -30,40 +31,31 @@ int main() {
     volSurface.loadFromCSV("config/vol_surface.csv");
 
     // ── Metrics ──────────────────────────────────────────────────────────────
-    // tickHotLatency:  time from tick generation (timestamp_ns set by sender)
-    //                  to the moment it is pushed onto the SPSC queue.
-    //                  Measures end-to-end UDP delivery + dispatch overhead.
+    // tickHotLatency: fast_now_ns() - tick.timestamp_ns on the UDP hot path.
+    //                 Measures one-way delivery + SPSC push overhead.
     //
-    // matchLatency:    exec.arrival_ns - exec.order_arrival_ns.
-    //                  The aggressor order's FIX parse timestamp to the moment
-    //                  the matching engine fires the Execution. True E2E latency.
+    // matchLatency:   exec.arrival_ns - exec.order_arrival_ns.
+    //                 Aggressor order's parse timestamp to Execution generated.
     //
-    // Both trackers use memory_order_relaxed atomics — safe to write from the
-    // hot threads and read from the cold path without a synchronisation fence.
+    // Both use memory_order_relaxed — safe to write from hot threads and read
+    // from the cold-path dashboard without a synchronisation fence.
     LatencyTracker tickHotLatency;
     LatencyTracker matchLatency;
 
-    // Dropped-event counters: incremented when the SPSC queue is full and push()
-    // returns false. A non-zero count means the hot path is producing faster than
-    // the cold path can drain — the queue needs to be sized larger or the cold
-    // path needs to drain faster.
     std::atomic<uint64_t> droppedTicks{0};
     std::atomic<uint64_t> droppedExecs{0};
 
     // Lock-free SPSC queues — the only synchronisation between hot and cold paths.
-    // 100,000 slots × sizeof(Tick/Execution): each queue occupies ~4–6 MB.
-    // Sized generously to absorb bursts; the cold path drains in a tight spin loop.
     SpscQueue<Tick>      tickQueue(100'000);
     SpscQueue<Execution> execQueue(100'000);
 
     // ── HOT PATH 1: UDP Market Data ─────────────────────────────────────────
     MarketDispatcher dispatcher;
 
-    // Record tick hot-path latency on every push. The Tick::timestamp_ns was set
-    // by the simulator using steady_clock, so now_ns() - timestamp_ns gives the
-    // true one-way delivery latency from sender to queue entry.
+    // fast_now_ns() replaces now_ns() here: this callback fires on every tick
+    // on the UDP receive thread. We shave ~10 ns per call vs steady_clock.
     auto tickCallback = [&](Tick t) {
-        tickHotLatency.record(now_ns() - t.timestamp_ns);
+        tickHotLatency.record(fast_now_ns() - t.timestamp_ns);
         if (!tickQueue.push(t)) [[unlikely]]
             droppedTicks.fetch_add(1, std::memory_order_relaxed);
     };
@@ -79,9 +71,9 @@ int main() {
     std::thread udpThread([&]() { subscriber.start(9000, dispatcher); });
 
     // ── HOT PATH 2: FIX Execution ────────────────────────────────────────────
-    // OrderBook is constructed inside the thread so the pool (4 MB slab) is
-    // allocated on the stack of that thread's OS stack page — increasing the chance
-    // it lands on NUMA-local memory for that core (on multi-socket systems).
+    // fixReader.start() is now a template: the compiler instantiates it with the
+    // exact lambda type below, inlining the orderBook.acceptNewOrder() call
+    // directly into the mmap parse loop — no virtual dispatch, no std::function.
     std::thread executionThread([&]() {
         OrderBook orderBook;
         orderBook.setExecutionCallback([&](Execution exec) {
@@ -90,18 +82,15 @@ int main() {
         });
 
         FixSessionReader fixReader;
-        fixReader.setOrderCallback([&](Order order) { orderBook.acceptNewOrder(order); });
-        fixReader.start("config/orders.fix");
+        fixReader.start("config/orders.fix",
+                        [&](Order order) { orderBook.acceptNewOrder(order); });
 
         std::cout << "[exec] Pool slots remaining after FIX replay: "
                   << orderBook.poolAvailable() << " / "
                   << ObjectPool<Order, 65536>::capacity() << "\n";
     });
 
-    // CPU affinity: pin the two hot-path threads to dedicated cores.
-    // Core layout: 0 = cold/main, 1 = udpThread, 2 = executionThread.
-    // On macOS this is advisory; on Linux it is enforced by the scheduler.
-    // Adjust core IDs based on the machine's topology (lscpu / sysctl hw.physicalcpu).
+    // CPU affinity: pin hot-path threads to dedicated cores.
     pin_thread_to_core(udpThread,       1);
     pin_thread_to_core(executionThread, 2);
 
@@ -109,21 +98,67 @@ int main() {
     PositionManager positionManager;
     RiskEngine      riskEngine(positionManager, volSurface);
 
-    // Cold-path drain statistics (single-threaded, no atomics needed).
+    // ── WebSocket Metrics Server (Boost.Beast) ────────────────────────────────
+    // Broadcasts a JSON snapshot to every connected WebSocket client every second.
+    //
+    // Connect with:  wscat -c ws://localhost:9001
+    //                websocat ws://localhost:9001
+    //
+    // The snapshot lambda captures the trackers and queues by reference.
+    // It is called on the metrics server's per-client thread — reads are safe
+    // because all LatencyTracker accessors use memory_order_relaxed atomics, and
+    // SpscQueue::size() is a relaxed load on the write-side atomic.
+    MetricsServer metricsServer(9001, [&]() -> MetricsSnapshot {
+        return MetricsSnapshot{
+            .tick_p50  = tickHotLatency.percentile(50.0),
+            .tick_p99  = tickHotLatency.percentile(99.0),
+            .tick_p999 = tickHotLatency.percentile(99.9),
+            .tick_max  = tickHotLatency.max(),
+            .tick_count = tickHotLatency.count(),
+
+            .match_p50  = matchLatency.percentile(50.0),
+            .match_p99  = matchLatency.percentile(99.0),
+            .match_p999 = matchLatency.percentile(99.9),
+            .match_max  = matchLatency.max(),
+            .match_count = matchLatency.count(),
+
+            .dropped_ticks = droppedTicks.load(std::memory_order_relaxed),
+            .dropped_execs = droppedExecs.load(std::memory_order_relaxed),
+
+            .tick_queue_depth    = tickQueue.size(),
+            .exec_queue_depth    = execQueue.size(),
+            .tick_queue_capacity = tickQueue.capacity(),
+            .exec_queue_capacity = execQueue.capacity(),
+        };
+    });
+    metricsServer.start();
+
     uint64_t totalDrainCycles  = 0;
-    uint64_t maxTickBatch      = 0;   // largest burst of ticks drained in one cycle
-    uint64_t maxExecBatch      = 0;   // largest burst of executions in one cycle
-    uint64_t maxTickQueueDepth = 0;   // peak observed SPSC fill level for ticks
-    uint64_t maxExecQueueDepth = 0;   // peak observed SPSC fill level for executions
+    uint64_t maxTickBatch      = 0;
+    uint64_t maxExecBatch      = 0;
+    uint64_t maxTickQueueDepth = 0;
+    uint64_t maxExecQueueDepth = 0;
 
     auto lastReportTime = std::chrono::steady_clock::now();
+
+    // ── Adaptive Spin ─────────────────────────────────────────────────────────
+    // If work was found (ticks or execs in the queues), loop immediately —
+    // draining as fast as possible gives sub-millisecond cold-path latency.
+    //
+    // If the queues are empty, spin with CPU_PAUSE() for up to kSpinMax
+    // iterations (~7 µs on a 3 GHz CPU at 14 cycles/PAUSE), then fall back
+    // to a short sleep. This "adaptive" approach balances two extremes:
+    //
+    //   Pure spin: lowest latency, but burns a whole CPU core even when idle.
+    //   Pure sleep: 1 ms dead time on every cycle — ~1000x worse latency.
+    //
+    // Adaptive: sub-10µs react time under load, ~5% CPU at idle.
+    constexpr int kSpinMax = 500;
+    int spin = 0;
 
     while (running) {
         ++totalDrainCycles;
 
-        // Sample queue depth before draining — this is the "queue pressure" metric.
-        // High pressure (depth close to capacity) means the hot path is outrunning
-        // the cold path and the queue is at risk of dropping events.
         const auto tickDepth = tickQueue.size();
         const auto execDepth = execQueue.size();
         if (tickDepth > maxTickQueueDepth) maxTickQueueDepth = tickDepth;
@@ -140,18 +175,26 @@ int main() {
         Execution e;
         uint64_t execBatch = 0;
         while (execQueue.pop(e)) {
-            // E2E matching latency: from the moment the FIX parser stamped the
-            // order (order_arrival_ns) to the moment the execution was generated.
             matchLatency.record(e.arrival_ns - e.order_arrival_ns);
             positionManager.onExecution(e);
             ++execBatch;
         }
         if (execBatch > maxExecBatch) maxExecBatch = execBatch;
 
+        const bool didWork = tickBatch > 0 || execBatch > 0;
+        if (didWork) {
+            spin = 0;
+        } else if (spin < kSpinMax) {
+            CPU_PAUSE();
+            ++spin;
+        } else {
+            std::this_thread::sleep_for(std::chrono::microseconds(100));
+            spin = 0;
+        }
+
         const auto now = std::chrono::steady_clock::now();
         if (std::chrono::duration_cast<std::chrono::seconds>(now - lastReportTime).count() >= 5) {
 
-            // ── Metrics Dashboard ───────────────────────────────────────────
             std::cout << "\n\033[1m═══ Metrics Dashboard ═══════════════════════════════════════\033[0m\n";
 
             tickHotLatency.report("tick hot-path (UDP → queue)");
@@ -175,25 +218,20 @@ int main() {
                       << "   max_tick_batch=" << maxTickBatch
                       << "   max_exec_batch=" << maxExecBatch << "\n";
 
-            // Reset per-report-window stats (latency histograms + pressure peaks).
-            // Totals (droppedTicks/Execs, totalDrainCycles) are cumulative from startup.
+            std::cout << "  metrics WebSocket: ws://localhost:9001\n";
+
             tickHotLatency.reset();
             matchLatency.reset();
             maxTickQueueDepth = 0;
             maxExecQueueDepth = 0;
 
-            // ── Risk Report ─────────────────────────────────────────────────
             riskEngine.runReport();
             riskEngine.computeVar();
             lastReportTime = now;
         }
-
-        // 1 ms yield keeps cold-path CPU usage low without adding meaningful latency.
-        // In a true HFT cold path, use _mm_pause() for a spin-wait that yields the
-        // CPU pipeline without sleeping, achieving sub-microsecond reaction time.
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
 
+    metricsServer.stop();
     subscriber.stop();
     udpThread.join();
     executionThread.join();

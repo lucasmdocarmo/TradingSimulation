@@ -2,6 +2,8 @@
 
 #include "tick.h"
 
+#include <cstdint>
+#include <cstring>
 #include <functional>
 #include <string>
 #include <unordered_map>
@@ -10,37 +12,38 @@
 // Pub-Sub routing layer for market data ticks.
 //
 // PATTERN: OBSERVER / PUB-SUB
-// The dispatcher decouples the source of market data (UDP socket) from its
-// consumers (Risk Engine). The UDP subscriber knows nothing about who is
-// listening; the Risk Engine knows nothing about where ticks come from.
-// They communicate only through the dispatcher via registered callbacks.
+// Decouples the UDP receiver from the risk engine. Neither knows about the other.
 //
-// This is the Observer pattern: subscribers register callbacks, the dispatcher
-// notifies all of them when an event (a tick) arrives.
+// HOT-PATH OPTIMIZATION: uint64_t symbol key
+// The previous version used unordered_map<std::string, ...> and constructed
+// a temporary std::string on every dispatch() call:
+//   std::string key(tick.symbol);  ← SSO-allocated, hashed byte-by-byte
 //
-// DATA STRUCTURE
-// std::unordered_map<symbol, vector<callbacks>> — O(1) average lookup by symbol.
-// Multiple callbacks per symbol are supported (e.g. both a risk engine and a
-// strategy could subscribe to AAPL ticks independently).
+// The new version reinterprets char[8] as a uint64_t with a single memcpy.
+// This is well-defined under [basic.types] because both types are trivially
+// copyable and share the same size. Integer hashing is a single multiply +
+// shift (~3 ns), vs string hashing (~8–12 ns for 4–6 char symbols).
 //
-// HOT PATH NOTE
-// dispatch() is called on the UDP receive thread for every incoming tick.
-// The std::function callbacks and the temporary std::string key construction
-// add some overhead. In a production system, the dispatcher would use a flat
-// symbol table (array indexed by a numeric instrument ID) to eliminate the map
-// lookup entirely. See market_dispatcher.cpp for the inline explanation.
+// Before (every dispatch call): construct std::string → hash bytes → lookup
+// After  (every dispatch call): memcpy 8 bytes → hash uint64 → lookup
 class MarketDispatcher {
 public:
-    // Registers a callback for a specific symbol (e.g. "AAPL").
-    // Not thread-safe — call only at startup before threads are running.
+    // Registers a callback for symbol (e.g. "AAPL"). Startup-only, not hot-path.
     void subscribe(const std::string& symbol, const std::function<void(Tick)>& callback);
 
-    // Routes an incoming tick to all callbacks registered for tick.symbol.
-    // Called on the hot UDP receive thread — no blocking, no I/O.
+    // Routes a tick to all callbacks registered for tick.symbol.
+    // Called on the hot UDP receive thread — no locks, no heap allocation.
     void dispatch(const Tick& tick);
 
     int subscriberCount(const std::string& symbol) const;
 
 private:
-    std::unordered_map<std::string, std::vector<std::function<void(Tick)>>> listCallback;
+    // Reinterpret char[8] as uint64_t via memcpy — branch-free, one load.
+    static uint64_t sym_key(const char* s) noexcept {
+        uint64_t k = 0;
+        std::memcpy(&k, s, sizeof(k));
+        return k;
+    }
+
+    std::unordered_map<uint64_t, std::vector<std::function<void(Tick)>>> callbacks_;
 };
