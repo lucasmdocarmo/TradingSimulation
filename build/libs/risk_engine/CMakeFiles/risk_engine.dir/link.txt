@@ -1,0 +1,2 @@
+/usr/bin/ar qc librisk_engine.a CMakeFiles/risk_engine.dir/src/risk_engine.cpp.o
+/usr/bin/ranlib librisk_engine.a

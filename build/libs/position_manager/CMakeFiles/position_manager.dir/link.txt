@@ -1,0 +1,2 @@
+/usr/bin/ar qc libposition_manager.a CMakeFiles/position_manager.dir/src/position_manager.cpp.o
+/usr/bin/ranlib libposition_manager.a

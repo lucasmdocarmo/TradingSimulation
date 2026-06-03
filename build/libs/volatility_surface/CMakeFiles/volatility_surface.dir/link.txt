@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvolatility_surface.a CMakeFiles/volatility_surface.dir/src/vol_surface.cpp.o
+/usr/bin/ranlib libvolatility_surface.a

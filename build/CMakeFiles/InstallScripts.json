@@ -1,0 +1,16 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/lucasmariano/TradingSimulations/build/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/libs/reference-data/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/libs/order-book/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/libs/position_manager/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/libs/fix_session/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/libs/market_data/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/libs/volatility_surface/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/libs/risk_engine/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/src/cmake_install.cmake",
+		"/Users/lucasmariano/TradingSimulations/build/tools/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfix_session.a CMakeFiles/fix_session.dir/src/fix_session_reader.cpp.o
+/usr/bin/ranlib libfix_session.a

@@ -1,0 +1,7 @@
+
+add_executable(udp_tick_simulator udp_tick_simulator.cpp)
+
+
+target_include_directories(udp_tick_simulator PRIVATE include)
+add_executable(fix_order_simulator fix_order_simulator.cpp)
+target_link_libraries(udp_tick_simulator PRIVATE market_data)

@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/udp_tick_simulator.dir/udp_tick_simulator.cpp.o -o udp_tick_simulator  ../libs/market_data/libmarket_data.a

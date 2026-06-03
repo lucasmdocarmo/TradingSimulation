@@ -1,0 +1,2 @@
+/usr/bin/ar qc libreference-data.a "CMakeFiles/reference-data.dir/src/instrument_store.cpp.o"
+/usr/bin/ranlib libreference-data.a

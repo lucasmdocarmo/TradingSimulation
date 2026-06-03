@@ -1,0 +1,16 @@
+symbol,description,asset_class,currency,tick_size,contract_size,strike,option_type,option_style,underlying,expiry
+AAPL,Apple Inc,Equity,USD,0.01,1,,,,,
+MSFT,Microsoft Corp,Equity,USD,0.01,1,,,,,
+GOOGL,Alphabet Inc,Equity,USD,0.01,1,,,,,
+TSLA,Tesla Inc,Equity,USD,0.01,1,,,,,
+ESZ4,E-mini S&P 500 Dec 2024,Future,USD,0.25,50,,,,SPX,2024-12-20
+NQZ4,E-mini Nasdaq Dec 2024,Future,USD,0.25,20,,,,NDX,2024-12-20
+CLZ4,Crude Oil Dec 2024,Future,USD,0.01,1000,,,,CL,2024-12-19
+GCZ4,Gold Dec 2024,Future,USD,0.10,100,,,,GC,2024-12-26
+AAPL240119C150,AAPL Call 150 Jan24,Option,USD,0.01,100,150.0,Call,European,AAPL,2024-01-19
+AAPL240119P140,AAPL Put 140 Jan24,Option,USD,0.01,100,140.0,Put,European,AAPL,2024-01-19
+MSFT240119C400,MSFT Call 400 Jan24,Option,USD,0.01,100,400.0,Call,European,MSFT,2024-01-19
+TSLA240119P200,TSLA Put 200 Jan24,Option,USD,0.01,100,200.0,Put,American,TSLA,2024-01-19
+GBPUSD,GBP/USD Spot,FX,USD,0.0001,100000,,,,,
+EURUSD,EUR/USD Spot,FX,USD,0.0001,100000,,,,,
+USDJPY,USD/JPY Spot,FX,JPY,0.01,100000,,,,,
