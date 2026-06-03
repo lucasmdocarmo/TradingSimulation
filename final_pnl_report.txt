@@ -1,0 +1,6 @@
+AAPL  qty=10813  avg=152.313  realised=-7147.25
+TSLA  qty=-12942  avg=190.949  realised=3156.81
+GOOGL  qty=11747  avg=142.625  realised=2937.83
+ESZ4  qty=-10308  avg=4463.43  realised=63182.7
+GBPUSD  qty=10948  avg=1.23673  realised=-36.9058
+MSFT  qty=15177  avg=302.258  realised=-7409.49

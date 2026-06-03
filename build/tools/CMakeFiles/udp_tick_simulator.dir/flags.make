@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/lucasmariano/TradingSimulations/tools/include -I/Users/lucasmariano/TradingSimulations/libs/market_data/include
+CXX_INCLUDES = -I/Users/lucasmariano/TradingSimulations/libs/utils/include -I/Users/lucasmariano/TradingSimulations/tools/include -I/Users/lucasmariano/TradingSimulations/libs/market_data/include
 
 CXX_FLAGSarm64 = -std=gnu++20 -arch arm64
 

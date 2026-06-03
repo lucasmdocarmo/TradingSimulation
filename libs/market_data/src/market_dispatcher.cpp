@@ -1,33 +1,32 @@
 #include "market_dispatcher.h"
-#include "iostream"
-#include <functional>
-#include <string>
-void MarketDispatcher::subscribe(const std::string &symbol,
-                                 const std::function<void(Tick)> &callback) {
-  if (!symbol.empty()) {
-    // Add the callback to the list of listeners for this symbol
-    listCallback[symbol].push_back(callback);
-  }
-};
 
-void MarketDispatcher::dispatch(const Tick &tick) {
-  std::cout << tick.symbol << " bid=" << tick.bid << " ask=" << tick.ask
-            << "\n";
-            
-  // Find all listeners registered for this tick's symbol
-  auto it = listCallback.find(tick.symbol);
-  if (it == listCallback.end())
-    return; // No listeners for this symbol
-    
-  // Invoke each registered callback synchronously
-  for (auto &callback : it->second) {
-    callback(tick);
-  }
+#include <string>
+
+void MarketDispatcher::subscribe(const std::string& symbol,
+                                 const std::function<void(Tick)>& callback) {
+    if (!symbol.empty())
+        listCallback[symbol].push_back(callback);
 }
 
-int MarketDispatcher::subscriberCount(const std::string &symbol) const {
-  auto it = listCallback.find(symbol);
-  if (it == listCallback.end())
-    return 0;
-  return it->second.size();
+void MarketDispatcher::dispatch(const Tick& tick) {
+    // std::cout removed from here intentionally.
+    // A std::cout call acquires an internal mutex and may perform a write() syscall,
+    // adding microseconds of jitter to every tick on the hot UDP receive path.
+    // Logging belongs on the cold path; the hot path should only push to queues.
+
+    // tick.symbol is char[8]; std::string(tick.symbol) constructs a temporary key.
+    // This involves a small heap allocation on each tick dispatch — a known cost.
+    // Future improvement: replace std::unordered_map<std::string,...> with a
+    // fixed-symbol lookup table (flat array + memcmp) to eliminate the allocation.
+    const auto it = listCallback.find(std::string(tick.symbol));
+    if (it == listCallback.end()) return;
+
+    for (const auto& cb : it->second)
+        cb(tick);
+}
+
+int MarketDispatcher::subscriberCount(const std::string& symbol) const {
+    const auto it = listCallback.find(symbol);
+    if (it == listCallback.end()) return 0;
+    return static_cast<int>(it->second.size());
 }
